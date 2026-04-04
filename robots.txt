@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://bestaitoolsforsolopreneurs.com/sitemap.xml
+Sitemap: https://bestaisolo.com/sitemap.xml
 
 # Block AI training crawlers
 User-agent: GPTBot
