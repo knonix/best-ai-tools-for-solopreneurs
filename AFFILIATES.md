@@ -35,7 +35,7 @@ The site currently uses placeholder referral links (`ref=solopreneurai`). To get
 
 ## Next Steps
 
-1. Go through each tool above and sign up using your preferred email
+1. Go through each tool above and sign up using hello@bestaisolo.com
 2. Get your unique affiliate link/ID for each
 3. Replace the links in the HTML files with your real ones
 4. I can then update all pages automatically
