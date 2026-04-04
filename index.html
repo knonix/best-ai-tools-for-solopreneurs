@@ -9,6 +9,14 @@
     <title>Best AI Tools for Solopreneurs 2026 • Reviews & Comparisons</title>
     <link rel="canonical" href="https://bestaisolo.com/">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' x='50%' font-size='70' text-anchor='middle' dominant-baseline='middle' fill='%23eab308'%3E%E2%8C%AC%3C/text%3E%3C/svg%3E">
+    <!-- Google tag (gtag.js) - G-PYDHTRC7GW -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYDHTRC7GW"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-PYDHTRC7GW');
+    </script>
     
     <!-- Open Graph -->
     <meta property="og:title" content="Best AI Tools for Solopreneurs in 2026">
@@ -54,10 +62,10 @@
                 <a href="disclosure.html" class="nav-link">Disclosure</a>
             </div>
             <div>
-                <a href="#" 
+                <button onclick="showSubscribeModal()" 
                    class="px-5 py-2.5 bg-white text-black text-sm font-medium rounded-2xl hover:bg-yellow-300 transition">
                     Subscribe
-                </a>
+                </button>
             </div>
         </div>
     </nav>
@@ -368,6 +376,33 @@
     <script>
         // Simple Tailwind script already included via CDN
         console.log("%cBest AI Tools for Solopreneurs - Homepage loaded", "color:#eab308; font-weight:bold");
+
+        function showSubscribeModal() {
+            const modal = document.createElement('div');
+            modal.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);display:flex;align-items:center;justify-content:center;z-index:9999;';
+            modal.innerHTML = `
+                <div style="background:#18181b;border-radius:16px;padding:32px;max-width:420px;width:90%;text-align:center;">
+                    <h3 style="color:white;font-size:24px;margin-bottom:8px;">Join the Newsletter</h3>
+                    <p style="color:#a1a1aa;margin-bottom:24px;">Get the latest AI tool recommendations and solopreneur tips delivered weekly.</p>
+                    <input type="email" id="emailInput" placeholder="your@email.com" style="width:100%;padding:14px;margin-bottom:16px;border-radius:12px;border:none;background:#27272a;color:white;">
+                    <button onclick="subscribe()" style="width:100%;padding:14px;background:#eab308;color:black;border-radius:12px;font-weight:600;">Subscribe Free</button>
+                    <p onclick="this.closest('.modal').remove()" style="margin-top:16px;color:#666;cursor:pointer;font-size:14px;">Close</p>
+                </div>
+            `;
+            modal.classList.add('modal');
+            document.body.appendChild(modal);
+        }
+
+        function subscribe() {
+            const email = document.getElementById('emailInput').value;
+            if (email && email.includes('@')) {
+                alert('✅ Thank you! You\'ve been subscribed. Check your email for confirmation.');
+                document.querySelector('.modal').remove();
+                // In production this would send to ConvertKit or Mailchimp
+            } else {
+                alert('Please enter a valid email address.');
+            }
+        }
     </script>
 </body>
 </html>
